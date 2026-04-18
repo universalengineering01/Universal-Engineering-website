@@ -1,0 +1,104 @@
+{
+  "theme": "dark",
+  "archetype": "2_performance_pro_industrial",
+  "design_philosophy": {
+    "emotion": "Urgency, Trust, Industrial Competence, Relief",
+    "strategy": "Mobile-first, high-conversion emergency landing page. Minimize cognitive load with massive, highly visible CTAs. Use high-contrast dark mode with electric yellow for primary actions. Incorporate sticky mobile call buttons to capture leads immediately."
+  },
+  "colors": {
+    "background": "#0A0A0A",
+    "surface": "#18181B",
+    "surface_elevated": "#27272A",
+    "primary": "#EAB308",
+    "primary_hover": "#CA8A04",
+    "primary_foreground": "#000000",
+    "secondary": "#22C55E",
+    "secondary_hover": "#16A34A",
+    "secondary_foreground": "#FFFFFF",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "#27272A",
+    "border_focus": "#EAB308"
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif"
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm uppercase tracking-wider"
+    },
+    "rules": [
+      "Headings must use tight letter spacing (tracking-tight or tighter)",
+      "Overlines/Labels must be uppercase with wide spacing (tracking-[0.2em])",
+      "Never use Inter for headings",
+      "Ensure minimum 4.5:1 contrast ratio for all text"
+    ]
+  },
+  "layout": {
+    "spacing_scale": "Tailwind standard (p-4, p-8, p-16, p-24). Use generous padding in desktop, tight but thumb-friendly in mobile.",
+    "bento_grid": {
+      "services": "grid-cols-1 md:grid-cols-2 gap-4 or gap-6",
+      "features": "grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    },
+    "alignment": "Left-align dense text. Center-align hero headings for impact."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-yellow-500 text-black hover:bg-yellow-600 font-bold rounded-none or small radius (rounded-md), uppercase tracking-wide px-8 py-4",
+      "secondary": "bg-green-500 text-white hover:bg-green-600 font-bold rounded-md px-8 py-4",
+      "outline": "border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-bold px-8 py-4",
+      "sticky_mobile": "fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 gap-2 p-2 bg-black/90 backdrop-blur-md border-t border-zinc-800 md:hidden"
+    },
+    "cards": {
+      "style": "bg-zinc-900 border border-zinc-800 rounded-lg p-6 hover:border-yellow-500/50 transition-colors",
+      "glass": "bg-zinc-900/60 backdrop-blur-xl border border-white/10 rounded-xl"
+    },
+    "header": {
+      "style": "fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10 py-4"
+    }
+  },
+  "media": {
+    "icons_library": "@phosphor-icons/react",
+    "image_urls": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1642016254209-f4e9281de1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxlbGVjdHJpYyUyMHNjb290ZXIlMjBjaXR5fGVufDB8fHx8MTc3NjU0NzUxNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Parked electric scooter on city street, used as darkened background for hero section (bg-black/60 overlay required)"
+      },
+      "service_repair": {
+        "url": "https://images.unsplash.com/photo-1550041473-d296a3a8a18a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwyfHxjaXJjdWl0JTIwYm9hcmQlMjByZXBhaXIlMjBtZWNoYW5pY3xlbnwwfHx8fDE3NzY1NDc1MTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Mechanic repairing electronics/circuit board"
+      },
+      "service_board": {
+        "url": "https://images.unsplash.com/photo-1563770660941-20978e870e26?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHw0fHxjaXJjdWl0JTIwYm9hcmQlMjByZXBhaXIlMjBtZWNoYW5pY3xlbnwwfHx8fDE3NzY1NDc1MTZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Close up of complex circuit board for diagnostic service visual"
+      },
+      "texture_bg": {
+        "url": "https://images.unsplash.com/photo-1699982759465-760038185549?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwzfHxibGFjayUyMHllbGxvdyUyMHRleHR1cmUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NjU0NzUxNnww&ixlib=rb-4.1.0&q=85",
+        "description": "Dark black texture for section background separation"
+      },
+      "testimonial_1": {
+        "url": "https://images.unsplash.com/photo-1753161023792-d240af5e6ef7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHw0fHxwb3J0cmFpdCUyMGN1c3RvbWVyJTIwc21pbGV8ZW58MHx8fHwxNzc2NTQ3NTIyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Happy customer portrait"
+      }
+    }
+  },
+  "specific_instructions_for_main_agent": [
+    "Ensure all buttons and links have data-testid attributes (e.g., data-testid='hero-call-btn').",
+    "Use a pure black (#0A0A0A) background for the body, avoiding flat grays to maintain the industrial vibe.",
+    "Implement a sticky mobile bottom bar containing two half-width buttons: 'Call Now' (Yellow) and 'WhatsApp' (Green) only visible on md:hidden breakpoints.",
+    "The hero section MUST use the hero_background image with a heavy bg-black/60 or bg-black/70 overlay so the white and yellow text is highly legible.",
+    "Use Lucide-react or Phosphor icons for service features (Lightning, Wrench, ShieldCheck, PhoneCall).",
+    "Ensure the layout is highly readable on mobile devices. Use p-4 padding globally on mobile, scaling up to p-12 on desktop.",
+    "Make sure all phone numbers (8178625048) are wrapped in <a href='tel:8178625048'> tags to enable one-click calling.",
+    "Make sure WhatsApp CTA uses <a href='https://wa.me/918178625048'> (assuming +91 for India)."
+  ],
+  "accessibility": {
+    "focus_states": "focus:ring-2 focus:ring-yellow-500 focus:outline-none",
+    "contrast": "Minimum 4.5:1 for normal text, 3:1 for large text"
+  }
+}
