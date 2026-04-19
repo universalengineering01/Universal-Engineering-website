@@ -12,7 +12,7 @@ export const StickyMobileCTA = () => {
       <a
         data-testid="sticky-call-btn"
         href={`tel:${PHONE}`}
-        className="flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 rounded-md uppercase tracking-wide text-sm transition-colors"
+        className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3 rounded-md uppercase tracking-wide text-sm transition-colors"
       >
         <Phone className="w-4 h-4" strokeWidth={2.5} />
         Call Now
