@@ -1,6 +1,7 @@
-import { Phone, Zap } from "lucide-react";
+import { Phone, Zap, Youtube } from "lucide-react";
 
 const PHONE = "8178625048";
+const YT = "https://youtube.com/@universalengineering01";
 
 export const Header = () => {
   return (
@@ -23,15 +24,27 @@ export const Header = () => {
           </div>
         </a>
 
-        <a
-          data-testid="header-call-btn"
-          href={`tel:${PHONE}`}
-          className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-3 sm:px-5 py-2 sm:py-2.5 rounded-md uppercase tracking-wide text-xs sm:text-sm transition-colors"
-        >
-          <Phone className="w-4 h-4" strokeWidth={2.5} />
-          <span className="hidden sm:inline">Call {PHONE}</span>
-          <span className="sm:hidden">Call Now</span>
-        </a>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            data-testid="header-youtube-btn"
+            href={YT}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Universal Engineering on YouTube"
+            className="hidden sm:flex items-center justify-center w-10 h-10 rounded-md border border-white/15 text-white/80 hover:text-white hover:border-red-500/60 hover:bg-red-500/10 transition-colors"
+          >
+            <Youtube className="w-5 h-5" strokeWidth={2} />
+          </a>
+          <a
+            data-testid="header-call-btn"
+            href={`tel:${PHONE}`}
+            className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-3 sm:px-5 py-2 sm:py-2.5 rounded-md uppercase tracking-wide text-xs sm:text-sm transition-colors"
+          >
+            <Phone className="w-4 h-4" strokeWidth={2.5} />
+            <span className="hidden sm:inline">Call {PHONE}</span>
+            <span className="sm:hidden">Call Now</span>
+          </a>
+        </div>
       </div>
     </header>
   );

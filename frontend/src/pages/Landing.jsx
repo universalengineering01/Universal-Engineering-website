@@ -14,6 +14,8 @@ import {
   MapPin,
   CheckCircle2,
   ArrowRight,
+  Youtube,
+  PlayCircle,
 } from "lucide-react";
 import Header from "@/components/Header";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
@@ -22,6 +24,7 @@ const PHONE = "8178625048";
 const PHONE_PRETTY = "+91 81786 25048";
 const WA_LINK =
   "https://wa.me/918178625048?text=Hi%2C%20I%20need%20help%20with%20my%20Ola%20battery";
+const YT_LINK = "https://youtube.com/@universalengineering01";
 
 const HERO_BG =
   "https://images.unsplash.com/photo-1642016254209-f4e9281de1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxlbGVjdHJpYyUyMHNjb290ZXIlMjBjaXR5fGVufDB8fHx8MTc3NjU0NzUxNnww&ixlib=rb-4.1.0&q=85";
@@ -166,6 +169,19 @@ export default function Landing() {
             <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Transparent pricing</span>
             <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Ola-pack experts</span>
           </div>
+
+          <a
+            data-testid="hero-youtube-btn"
+            href={YT_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-zinc-300 hover:text-red-400 transition-colors group"
+          >
+            <PlayCircle className="w-5 h-5 text-red-500 group-hover:scale-110 transition-transform" strokeWidth={2} />
+            <span className="underline underline-offset-4 decoration-red-500/40 group-hover:decoration-red-500">
+              Watch real battery repairs on YouTube
+            </span>
+          </a>
         </div>
       </section>
 
@@ -373,6 +389,16 @@ export default function Landing() {
               >
                 <MessageCircle className="w-4 h-4 text-green-500" />
                 Chat on WhatsApp
+              </a>
+              <a
+                data-testid="footer-youtube-btn"
+                href={YT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-red-400 transition-colors"
+              >
+                <Youtube className="w-5 h-5 text-red-500" />
+                Watch on YouTube
               </a>
             </div>
 
