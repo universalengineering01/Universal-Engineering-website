@@ -16,6 +16,7 @@ import {
   ArrowRight,
   Youtube,
   PlayCircle,
+  Navigation,
 } from "lucide-react";
 import Header from "@/components/Header";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
@@ -25,6 +26,7 @@ const PHONE_PRETTY = "+91 81786 25048";
 const WA_LINK =
   "https://wa.me/918178625048?text=Hi%2C%20I%20need%20help%20with%20my%20Ola%20battery";
 const YT_LINK = "https://youtube.com/@universalengineering01";
+const MAPS_LINK = "https://maps.app.goo.gl/orddWdRDSCoPs1HH9";
 
 const HERO_BG =
   "https://images.unsplash.com/photo-1642016254209-f4e9281de1e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxlbGVjdHJpYyUyMHNjb290ZXIlMjBjaXR5fGVufDB8fHx8MTc3NjU0NzUxNnww&ixlib=rb-4.1.0&q=85";
@@ -311,6 +313,104 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* VISIT STORE */}
+      <section
+        id="visit"
+        data-testid="visit-section"
+        className="py-20 sm:py-24 border-t border-zinc-900 bg-zinc-950/60"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch">
+            {/* Left: address + CTA */}
+            <div className="lg:col-span-3 relative overflow-hidden rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-black via-zinc-950 to-black p-7 sm:p-10">
+              <div className="absolute inset-0 bg-stripes opacity-40 pointer-events-none" />
+              <div className="relative">
+                <div className="text-xs font-semibold tracking-[0.25em] text-emerald-500 uppercase mb-3">
+                  04 — Visit Our Workshop
+                </div>
+                <h2 className="font-display font-black tracking-tight text-3xl sm:text-4xl lg:text-5xl leading-tight">
+                  Drop in. We'll <span className="text-emerald-500">take a look.</span>
+                </h2>
+                <p className="mt-4 text-zinc-400 text-sm sm:text-base leading-relaxed max-w-md">
+                  Bring your scooter for a free inspection. Most diagnoses done on the spot — transparent quote before any work.
+                </p>
+
+                <div className="mt-6 flex items-start gap-3 text-zinc-300">
+                  <MapPin className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" strokeWidth={2.2} />
+                  <div>
+                    <div className="font-display font-bold text-white text-base">
+                      Universal Engineering Workshop
+                    </div>
+                    <div className="text-sm text-zinc-400">Delhi NCR · Tap for exact location</div>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex items-start gap-3 text-zinc-300">
+                  <Clock className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" strokeWidth={2.2} />
+                  <div className="text-sm">
+                    <span className="font-semibold text-white">11 AM – 7 PM</span>
+                    <span className="text-zinc-500"> · All days</span>
+                  </div>
+                </div>
+
+                <div className="mt-7 flex flex-col sm:flex-row gap-3">
+                  <a
+                    data-testid="visit-directions-btn"
+                    href={MAPS_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-black px-6 py-4 rounded-md uppercase tracking-wide text-sm sm:text-base shadow-[0_10px_40px_-10px_rgba(16,185,129,0.7)] transition-all"
+                  >
+                    <Navigation className="w-5 h-5" strokeWidth={2.8} />
+                    Get Directions
+                  </a>
+                  <a
+                    data-testid="visit-call-btn"
+                    href={`tel:${PHONE}`}
+                    className="inline-flex items-center justify-center gap-2 border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-black font-bold px-6 py-4 rounded-md uppercase tracking-wide text-sm transition-colors"
+                  >
+                    <Phone className="w-5 h-5" strokeWidth={2.5} />
+                    Call Before Visiting
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: map preview card */}
+            <a
+              data-testid="visit-map-card"
+              href={MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="lg:col-span-2 group relative overflow-hidden rounded-2xl border border-zinc-800 hover:border-emerald-500/60 transition-colors min-h-[240px] lg:min-h-0"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80"
+                alt="Map location"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
+              <div className="relative h-full flex flex-col justify-between p-6 sm:p-8">
+                <div className="inline-flex items-center gap-2 self-start bg-emerald-500 text-black text-[10px] font-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black pulse-dot" />
+                  Open on Google Maps
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 text-white font-display font-black text-2xl sm:text-3xl tracking-tight">
+                    <Navigation className="w-6 h-6 text-emerald-500" strokeWidth={2.6} />
+                    Navigate Now
+                  </div>
+                  <div className="mt-1 text-xs text-zinc-300 uppercase tracking-[0.18em]">
+                    Tap to open directions
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* REPEAT CTA */}
       <section
         id="call"
@@ -408,12 +508,23 @@ export default function Landing() {
               </div>
               <div className="flex items-start gap-3 text-sm text-zinc-300 mb-2">
                 <MapPin className="w-4 h-4 text-emerald-500 mt-0.5" />
-                Pan India · Delhi NCR
+                Delhi NCR · Pan India support
               </div>
               <div className="flex items-start gap-3 text-sm text-zinc-300">
                 <Clock className="w-4 h-4 text-emerald-500 mt-0.5" />
                 11 AM – 7 PM · All days
               </div>
+
+              <a
+                data-testid="footer-directions-btn"
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 text-sm text-zinc-300 hover:text-emerald-400 transition-colors"
+              >
+                <Navigation className="w-4 h-4 text-emerald-500" />
+                Get Directions
+              </a>
 
               <a
                 data-testid="footer-cta-call"
